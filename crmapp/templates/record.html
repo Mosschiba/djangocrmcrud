@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title % } Details {% endblock title % }
+
+{% block body %}
+
+<table class="table  table-hover table-bordered ">
+    <thead class="table-info">
+      <tr>
+        <th scope="col"># ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Addresse</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Zipcode</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <a href=""><td>{{customer_record.id}}</td></a>
+            <td>{{customer_record.first_name}} {{customer_record.last_name}}</td>
+            <td>{{customer_record.email}}</td>
+            <td>{{customer_record.phone}}</td>
+            <td>{{customer_record.addresse}}</td>
+            <td>{{customer_record.city}}</td>
+            <td>{{customer_record.state}}</td>
+            <td>{{customer_record.zipcode}}</td>
+        </tr>
+    </tbody>
+    </table>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    <a href="{% url 'edit_record' %}" class="btn btn-primary">Edit</a>
+
+
+{% endblock body %}
